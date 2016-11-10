@@ -33,7 +33,8 @@ namespace CurrencyTrader.Gui
 
             //var tradeDataProvider = new StreamTradeDataProvider(tradeStream);
             var tradeDataProvider = new UrlTradeDataProvider(tradeUrl);
-
+           
+             
             var tradeValidator = new SimpleTradeValidator(logger);
             var tradeMapper = new SimpleTradeMapper();
             var tradeParser = new SimpleTradeParser(tradeValidator, tradeMapper);
