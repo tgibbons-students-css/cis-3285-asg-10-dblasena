@@ -12,6 +12,7 @@ namespace CurrencyTrader.AdoNet
         public AdoNetTradeStorage(ILogger logger)
         {
             this.logger = logger;
+            
         }
 
         public void Persist(IEnumerable<TradeRecord> trades)

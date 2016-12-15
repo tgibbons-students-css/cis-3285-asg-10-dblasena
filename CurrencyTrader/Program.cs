@@ -15,7 +15,7 @@ namespace CurrencyTrader
 
             //var tradeDataProvider = new StreamTradeDataProvider(tradeStream);
             var tradeDataProvider = new UrlTradeDataProvider(tradeUrl);
-
+            var SynchTradeStorage = new AdoNetTradeStorage(logger);
             var tradeValidator = new SimpleTradeValidator(logger);
             var tradeMapper = new SimpleTradeMapper();
             var tradeParser = new SimpleTradeParser(tradeValidator, tradeMapper);
